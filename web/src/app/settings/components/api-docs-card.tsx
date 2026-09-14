@@ -101,7 +101,7 @@ const docs: ApiDoc[] = [
     icon: FileArchive,
     input: [
       ["prompt", "string", "图片生成提示词。"],
-      ["model", "string", "可选，默认 gpt-image-2。"],
+      ["model", "string", "可选，默认 gpt-image-2，支持 gpt-image-2.5。"],
       ["n", "number", "可选，生成数量，当前限制 1-4。"],
       ["size", "string", "可选，图片尺寸。"],
       ["quality", "string", "可选，默认 auto。"],
@@ -215,7 +215,7 @@ const docs: ApiDoc[] = [
   },
 ];
 
-const usableModels = ["gpt-image-2", "codex-gpt-image-2", "auto", "gpt-5", "gpt-5-1", "gpt-5-2", "gpt-5-3", "gpt-5-3-mini", "gpt-5-mini"];
+const usableModels = ["gpt-image-2", "gpt-image-2.5", "codex-gpt-image-2", "auto", "gpt-5", "gpt-5-1", "gpt-5-2", "gpt-5-3", "gpt-5-3-mini", "gpt-5-mini"];
 
 function ParamTable({ rows }: { rows: ParamRow[] }) {
   return (
